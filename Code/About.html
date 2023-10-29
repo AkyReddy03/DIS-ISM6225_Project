@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Travel Explorer</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="src/img/favicon.png" rel="icon">
+    <link href="src/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="src/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="src/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="src/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="src/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="src/css/about.css" rel="stylesheet">
+    <link href="src/css/main.css" rel="stylesheet">
+
+    <!-- Template About JS File -->
+    <script>
+        window.onload = function() {
+            document.getElementById("all_profiles_one").style.display = "none";
+            document.getElementById("all_profiles_two").style.display = "none";
+            document.getElementById("all_profiles_three").style.display = "none";
+            document.getElementById("all_profiles_four").style.display = "none";
+            document.getElementById("toggle-all").style.display = "none";
+        }
+
+        function toggleAll(){
+            document.getElementById("all_profiles_one").style.display = "none";
+            document.getElementById("all_profiles_two").style.display = "none";
+            document.getElementById("all_profiles_three").style.display = "none";
+            document.getElementById("all_profiles_four").style.display = "none";
+            document.getElementById("toggle-all").style.display = "none";
+        }
+
+        function toggleContentOne() {
+            const contentToToggle = document.getElementById("all_profiles_one");
+            const removeAll = document.getElementById("toggle-all")
+
+            // Toggle the display of the content
+            if (contentToToggle.style.display === "none") {
+                contentToToggle.style.display = "flex";
+                removeAll.style.display = "block";
+            } else {
+                contentToToggle.style.display = "none";
+            }
+        }
+
+        function toggleContentTwo() {
+            const contentToToggle = document.getElementById("all_profiles_two");
+            const removeAll = document.getElementById("toggle-all")
+
+            // Toggle the display of the content
+            if (contentToToggle.style.display === "none") {
+                contentToToggle.style.display = "flex";
+                removeAll.style.display = "block";
+            } else {
+                contentToToggle.style.display = "none";
+            }
+        }
+
+        function toggleContentThree() {
+            const contentToToggle = document.getElementById("all_profiles_three");
+            const removeAll = document.getElementById("toggle-all")
+
+            // Toggle the display of the content
+            if (contentToToggle.style.display === "none") {
+                contentToToggle.style.display = "flex";
+                removeAll.style.display = "block";
+            } else {
+                contentToToggle.style.display = "none";
+            }
+        }
+
+        function toggleContentFour() {
+            const contentToToggle = document.getElementById("all_profiles_four");
+            const removeAll = document.getElementById("toggle-all")
+
+            // Toggle the display of the content
+            if (contentToToggle.style.display === "none") {
+                contentToToggle.style.display = "flex";
+                removeAll.style.display = "block";
+            } else {
+                contentToToggle.style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1 class="text-justify">CRF</h1>
+            </a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html">Gallery</a></li>
+                    <li><a href="crash_records.html">Crash Records</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="index.html">Contact</a></li>
+                </ul>
+            </nav><!-- .navbar -->
+
+            <a href="#login" class="login">Login</a>
+            <a href="#signup" class="signup">SignUp</a>
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ========= About Us ============== -->
+    <section id="about_us" class="about_us">
+        <h1 class="heading">ABOUT US</h1>
+        <div class="container d-flex" data-aos="fade-up">
+
+            <div class="item">
+                <div class="profile_img text-center">
+                    <img src="src/img/team/Rakesh.jpg" class="img-fluid" id="profile_image_one" alt="main image"
+                        data-aos="zoom-out" data-aos-delay="300">
+                    <div class="profile_text_one" style="padding: 20px;">
+                        <button type="button" class="btn btn-info" onclick="toggleContentOne()">Learn More</button>
+                    </div>
+                </div>
+                <div class="quote">
+                    <p style="color: red;"><b>Rakesh Vejandla</b></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="profile_img text-center">
+                    <img src="src/img/team/Akshay.jpg" class="img-fluid" id="profile_image_two" alt="main image"
+                        data-aos="zoom-out" data-aos-delay="300">
+                    <div class="profile_text_two" style="padding: 20px;">
+                        <button type="button" class="btn btn-info"  onclick="toggleContentTwo()">Learn More</button>
+                    </div>
+                </div>
+                <div class="quote">
+                    <p><b>Akshay Reddy Nalla</b></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="profile_img text-center">
+                    <img src="src/img/team/Manohar.jpeg" class="img-fluid" id="profile_image_three" alt="main image"
+                        data-aos="zoom-out" data-aos-delay="300">
+                    <div class="profile_text_three" style="padding: 20px;">
+                        <button type="button" class="btn btn-info" onclick="toggleContentThree()">Learn More</button>
+                    </div>
+                </div>
+                <div class="quote">
+                    <p><b>Manohar Reddy Pasham</b></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="profile_img text-center">
+                    <img src="src/img/team/Lavanya.jpeg" class="img-fluid" id="profile_image_four" alt="main image"
+                        data-aos="zoom-out" data-aos-delay="300">
+                    <div class="profile_text_four" style="padding: 20px;">
+                        <button type="button" class="btn btn-info"  onclick="toggleContentFour()">Learn More</button>
+                    </div>
+                </div>
+                <div class="quote">
+                    <p><b>Lakshmi Lavanya Javvadi</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <button type="button" class="btn btn-info m-20" style="float: right;" id ="toggle-all" class="toggle-all"  onclick="toggleAll()">Remove All</button>
+    <section class="profiles d-flex">
+        <div class="all_profiles">
+            <article class="all_profiles_one" id="all_profiles_one">
+                <div class="each_profile">
+                    <h3 class="about-us-name"> Vejandla Rakesh</h3><br>
+                    <center class="about-us-image"><img src="./src/img/team/Rakesh.jpg"></center><br>
+                    <center class="about-us-link"><a style="text-decoration: none; color:#0072b1; font-size:22px;"
+                            href="#">Linked In </a></center>
+                    <br>
+                </div>
+                <div class="about-us-text">
+                    <h3 class="">My Experience and Responsibilities</h3>
+                    <h4>Experience</h4>
+                    <p> I have a couple of years of experience in as a DOT Net Core Developer. 
+                        I worked on the diiferent projects, where I designed, built, and configured applications to meet business process and application requirements. 
+                        My ultimate goal is to become a Data Engineer.</p>
+                    <br>
+                    <h4>Responsibilities</h4>
+                    <p>This flask assignment helped me to learn about storing the data in SQLite for Signup, and Payment
+                        pages. I have generated a ticket using javascript before. Now by selecting the itinerary options
+                        provided the selected itinerary information is getting stored in the database and the ticket is
+                        getting printed on thank you page.
+                    </p>
+                </div>
+            </article><br>
+            <article class=" all_profiles_two" id="all_profiles_two">
+                <div class="each_profile">
+                    <h3 class="about-us-name"> Akshay Reedy Nalla</h3><br>
+                    <center class="about-us-image"><img src="./src/img/team/Akshay.jpg"></center><br>
+                    <center class="about-us-link"><a style="text-decoration: none; color:#0072b1; font-size:22px;"
+                            href="#">Linked In </a></center>
+                    <br>
+                </div>
+                <div class="about-us-text">
+                    <h3 class="">My Experience and Responsibilities</h3>
+                    <h4>Experience</h4>
+                    <p> I am a passionate and driven individual, on a quest to unravel the endless possibilities of data science. Currently pursuing my Master's degree in Business Analytics & Information Systems, With a background in business analytics and financial analysis, I possess a unique skill set that allows me to approach data analysis from both a technical and business perspective. My goal is to become a data scientist and make a meaningful impact by unlocking the power of data to drive informed decision-making. With expertise in programming languages such as Python, R, and SAS, as well as proficiency in data visualization tools like Tableau, I am well-equipped to analyze and interpret complex datasets. By continuously expanding my knowledge and honing my skills in statistical modeling, machine learning, and data visualization, I am committed to achieving my goal and contributing to the advancement of the data-driven world.
+                    </p>
+                    <br>
+                    <h4>Responsibilities</h4>
+                    <p>This flask assignment helped me to learn about storing the data in SQLite for Signup, and Payment
+                        pages. I have generated a ticket using javascript before. Now by selecting the itinerary options
+                        provided the selected itinerary information is getting stored in the database and the ticket is
+                        getting printed on thank you page.
+                    </p>
+                </div>
+            </article><br>
+            <article class=" all_profiles_three" id="all_profiles_three">
+                <div class="each_profile">
+                    <h3 class="about-us-name"> Manohar Reddy Pasham</h3><br>
+                    <center class="about-us-image"><img src="./src/img/team/manohar.jpeg"></center><br>
+                    <center class="about-us-link"><a style="text-decoration: none; color:#0072b1; font-size:22px;"
+                            href="#">Linked In </a></center>
+                    <br>
+                </div>
+                <div class="about-us-text">
+                    <h3 class="">My Experience and Responsibilities</h3>
+                    <h4>Experience</h4>
+                    <p> I am Manohar Reddy Pasham, and I served as a Financial Data Analyst  from April 2019 to June 2022. In this role, 
+                        I collected, processed, and analyzed data, utilizing advanced tools to develop detailed spreadsheets for trend identification and revenue, 
+                        profitability, and expense forecasting. I conducted in-depth financial analysis, pinpointing operational changes, 
+                        trends, and potential areas for improvement, while also presenting data-driven insights through dashboards and reports using Tableau and Power BI. 
+                        Additionally, I conducted market research and competitive analysis, providing valuable information to shape financial strategies and investment decisions. 
+                        I carried out cost-benefit analyses for potential investments, delivering recommendations to maximize returns
+                    </p>
+                    <br>
+                    <h4>Responsibilities</h4>
+                    <p>This flask assignment helped me to learn about storing the data in SQLite for Signup, and Payment
+                        pages. I have generated a ticket using javascript before. Now by selecting the itinerary options
+                        provided the selected itinerary information is getting stored in the database and the ticket is
+                        getting printed on thank you page.
+                    </p>
+                </div>
+            </article><br>
+            <article class=" all_profiles_four" id="all_profiles_four">
+                <div class="each_profile">
+                    <h3 class="about-us-name">Lakshmi Lavanya Javvadi</h3><br>
+                    <center class="about-us-image"><img src="./src/img/team/Lavanya.jpeg"></center><br>
+                    <center class="about-us-link"><a style="text-decoration: none; color:#0072b1; font-size:22px;"
+                            href="#">Linked In </a></center>
+                    <br>
+                </div>
+                <div class="about-us-text">
+                    <h3 class="">My Experience and Responsibilities</h3>
+                    <h4>Experience</h4>
+                    <p> I'm Lakshmi Lavanya Javvadi, a data analyst with one year of experience in the field. I became quite interested in data analysis while I was studying IT as an undergrad. I decided to pursue a career in this field because I was intrigued by how data may lead to beneficial outcomes for organizations and society. The ability of data to radically alter how decisions are made fascinates me.
+                        In the past, I worked at "Prodapt Solutions Private Limited"  as a data analyst, where my duties included gathering, analyzing, and interpreting data from various databases, surveys, and social media platforms. I carried out data cleansing, transformation, and visualization duties while also collecting valuable insights to assist strategic decision-making processes using tools including Excel, SQL, Python, and Tableau. I delivered data-driven recommendations to maximize business outcomes by working closely with cross-functional teams in marketing, sales, and product development.
+                        
+                    </p>
+                    <br>
+                    <h4>Responsibilities</h4>
+                    <p>This flask assignment helped me to learn about storing the data in SQLite for Signup, and Payment
+                        pages. I have generated a ticket using javascript before. Now by selecting the itinerary options
+                        provided the selected itinerary information is getting stored in the database and the ticket is
+                        getting printed on thank you page.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
