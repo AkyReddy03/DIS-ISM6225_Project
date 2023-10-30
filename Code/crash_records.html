@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Travel Explorer</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="src/img/favicon.png" rel="icon">
+    <link href="src/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../assets/vendor/aos/dist/aos.css">
+    <link rel="stylesheet" href="dist/css/glightbox.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Template Main CSS File -->
+    <link href="src/css/crash-records.css" rel="stylesheet">
+    <link href="src/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1 class="text-justify">CRF</h1>
+            </a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html">Gallery</a></li>
+                    <li><a href="crash_records.html">Crash Records</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="index.html">Contact</a></li>
+                </ul>
+            </nav><!-- .navbar -->
+
+            <a href="#login" class="login">Login</a>
+            <a href="#signup" class="signup">SignUp</a>
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <br>
+    <!-- search Records -->
+    <section id="search" class="search">
+        <div class="container-fluid" data-aos="fade-up">
+
+            <div class="section-header">
+                <h2>Search Crashes</h2>
+                <p>Need Help? <span>Filter Records based on below fields</span></p>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-4">
+                    <label for="crash-id">Crash Number: </label>
+                    <input type="text" name="crash-id" class="form-control" id="crash-id" placeholder="Your Crash id">
+                </div>
+                <div class="col-xl-4">
+                    <label for="email">Email: </label>
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Your Email">
+                </div>
+                <div class="col-xl-4">
+                    <label for="name">Name: </label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+                </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col-xl-4 dropdown">
+                    <label for="vehicle-type">Vehicle Type: </label><br>
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Vehicle Type
+                    </button>
+                </div>
+                <div class="col-xl-4 dropdown">
+                    <label for="weather-condition">Weather Condition: </label><br>
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Weather Condition
+                    </button>
+                </div>
+                <div class="col-xl-4 dropdown">
+                    <label for="vehicle-type">Road Condition: </label><br>
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Road Condition
+                    </button>
+                </div>
+            </div>
+            <div><button style="width: 400px; display: flex; justify-content: center;" type="submit">Search</button>
+            </div>
+        </div>
+        <br>
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Crash Id</th>
+                        <th>Crash Location</th>
+                        <th>Crash Date</th>
+                        <th>Crash Year</th>
+                        <th>Road Character</th>
+                        <th>Road Condition</th>
+                        <th>Vehicle Type 1</th>
+                        <th>Vehicle Type 2</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3453443</td>
+                        <td>Flecther,Tampa,FL,33647</td>
+                        <td>09/21/2023</td>
+                        <td>Straight</td>
+                        <td>DRY</td>
+                        <td>Passenger Car</td>
+                        <td>Sports Utility</td>
+                        <td>Active</td>
+                        <td><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td>34344122</td>
+                        <td>temple terrace,Arizona,AZ,33438</td>
+                        <td>09/23/2023</td>
+                        <td>Divided</td>
+                        <td>Wet</td>
+                        <td>Passenger Car</td>
+                        <td>Passenger Car</td>
+                        <td>Active</td>
+                        <td><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td>456563534</td>
+                        <td>Fowler,Texas,TX,36123</td>
+                        <td>09/30/2023</td>
+                        <td>Straight</td>
+                        <td>Dry</td>
+                        <td>Sports Car</td>
+                        <td>Passenger Car</td>
+                        <td>Active</td>
+                        <td><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td>786775675</td>
+                        <td>Downtown,Texas,TX,36123</td>
+                        <td>10/21/2023</td>
+                        <td>Four Way Divided</td>
+                        <td>Dry</td>
+                        <td>Sports Car</td>
+                        <td>Passenger Car</td>
+                        <td>Active</td>
+                        <td><a href="#">Edit</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <div class="data-model">
+        <h2>Data-Model: </h2>
+        <img src="src/img/datamodel.png" alt="data model">
+    </div>
+    <div class="github-link">
+        <h3>Access to our Github Repository: </h3><a href="https://github.com/AkyReddy03/DIS-ISM6225_Project">Github
+            Link</a>
+    </div>
+
+</body>
