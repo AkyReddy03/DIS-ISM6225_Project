@@ -31,6 +31,47 @@
     <!-- Template Main CSS File -->
     <link href="src/css/crash-records.css" rel="stylesheet">
     <link href="src/css/main.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const table = document.querySelector('table');
+            const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+            const years = Array.from(rows, row => row.getElementsByTagName('td')[3].textContent);
+            const uniqueYears = Array.from(new Set(years));
+
+            const yearCounts = uniqueYears.map(year => {
+                const count = years.filter(y => y === year).length;
+                return count;
+            });
+
+            const ctx = document.getElementById('yearlyCrashChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: uniqueYears,
+                    datasets: [{
+                        label: 'Crashes by Year',
+                        data: yearCounts,
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1,
+                    }],
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                        },
+                    },
+                },
+            });
+        });
+
+    </script>
+
 </head>
 
 <body>
@@ -117,7 +158,7 @@
             </div>
         </div>
         <br>
-        <div class="table">
+        <div class="table-display">
             <table>
                 <thead>
                     <tr>
@@ -138,6 +179,7 @@
                         <td>3453443</td>
                         <td>Flecther,Tampa,FL,33647</td>
                         <td>09/21/2023</td>
+                        <td>2019</td>
                         <td>Straight</td>
                         <td>DRY</td>
                         <td>Passenger Car</td>
@@ -149,6 +191,7 @@
                         <td>34344122</td>
                         <td>temple terrace,Arizona,AZ,33438</td>
                         <td>09/23/2023</td>
+                        <td>2020</td>
                         <td>Divided</td>
                         <td>Wet</td>
                         <td>Passenger Car</td>
@@ -160,6 +203,7 @@
                         <td>456563534</td>
                         <td>Fowler,Texas,TX,36123</td>
                         <td>09/30/2023</td>
+                        <td>2019</td>
                         <td>Straight</td>
                         <td>Dry</td>
                         <td>Sports Car</td>
@@ -171,6 +215,7 @@
                         <td>786775675</td>
                         <td>Downtown,Texas,TX,36123</td>
                         <td>10/21/2023</td>
+                        <td>2019</td>
                         <td>Four Way Divided</td>
                         <td>Dry</td>
                         <td>Sports Car</td>
@@ -184,13 +229,6 @@
 
     </section>
 
-    <div class="data-model">
-        <h2>Data-Model: </h2>
-        <img src="src/img/datamodel.png" alt="data model">
-    </div>
-    <div class="github-link">
-        <h3>Access to our Github Repository: </h3><a href="https://github.com/AkyReddy03/DIS-ISM6225_Project">Github
-            Link</a>
-    </div>
-
-</body>
+    <h4>Bar Chart Yearly Crashes</h4><canvas id="yearlyCrashChart"></canvas 
+    
+    </body>
